@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hermes-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: PYTHONUNBUFFERED
+        value: "1"
